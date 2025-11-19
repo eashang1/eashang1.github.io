@@ -21,7 +21,7 @@
                     <a href="#projects" class="nav-link" onclick="showTab('projects')">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#resume" class="nav-link" onclick="showTab('resume')">Resume</a>
+                    <a href="#cv" class="nav-link" onclick="showTab('cv')">CV</a>
                 </li>
             </ul>
         </div>
@@ -36,16 +36,16 @@
                 </div>
                 <div class="home-intro">
                     <h2>Eashan Gandotra</h2>
-                    <p class="title">Quantitative Researcher | Mathematics & Computing</p>
                     <p class="summary">
-                        I am a quantitative researcher at Chicago Trading Company, where I work on the equity desk focusing on volatility modeling and pricing.
-                        I graduated from Georgia Institute of Technology in 2023 with a BS in Mathematics and a minor in Computing and Intelligence, earning a 3.96 GPA.
-                        During my time at Georgia Tech, I had the opportunity to study abroad at the Budapest Semesters in Mathematics program in Fall 2022,
-                        where I achieved a 4.0 GPA while exploring advanced mathematical topics.
+                        I'm a Quantitative Researcher at Chicago Trading Company, where I work on volatility modeling, finite-difference pricing methods, and risk assessment using statistical and machine learning techniques.
+                        I approach these problems through a lens of rigorous and elegant mathematical reasoning.
                     </p>
                     <p class="summary">
-                        Beyond my professional work in quantitative finance, I have a deep appreciation for the intersection of mathematics, computing, and real-world applications.
-                        In my free time, I enjoy cooking, reading, distance running, traveling, and playing the violin. These pursuits keep me balanced and constantly learning.
+                        I previously studied math and computing at Georgia Tech, and spent a semester in the Budapest Semesters in Mathematics program, focusing on research oriented coursework.
+                    </p>
+                    <p class="summary">
+                        Outside of work, I enjoy pursuing side projects and writing about interesting quantitative problems.
+                        In my free time, I'm a distance runner, violinist, fantasy-fiction reader, and enthusiastic foodie.
                     </p>
 
                     <div class="contact-section">
@@ -96,132 +96,32 @@
         <!-- Papers Section -->
         <section id="papers" class="tab-content">
             <h2>Papers</h2>
-            <div class="papers-list">
-                <div class="paper-item">
-                    <h3>Ramanujan's Summation</h3>
-                    <p class="authors">Eashan Gandotra</p>
-                    <p class="venue">Georgia Institute of Technology, 2022</p>
-                    <p class="description">
-                        An exposition on Ramanujan's famous summation result showing that the sum of all positive integers
-                        equals -1/12. Written after completing a complex analysis course, this paper explores the mathematical
-                        foundations and techniques behind this counterintuitive result.
-                    </p>
-                    <div class="paper-links">
-                        <a href="papers/ramanujans-summation.pdf" class="btn-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-
-                <div class="paper-item">
-                    <h3>Introduction to Olympiad Inequalities</h3>
-                    <p class="authors">Eashan Gandotra</p>
-                    <p class="venue">Georgia Institute of Technology, 2020</p>
-                    <p class="description">
-                        A comprehensive guide to inequality techniques commonly used in mathematics competitions.
-                        Created during a Putnam seminar course at Georgia Tech, covering fundamental methods and
-                        problem-solving strategies for olympiad-level inequalities.
-                    </p>
-                    <div class="paper-links">
-                        <a href="papers/introduction-to-olympiad-inequalities.pdf" class="btn-link" target="_blank">PDF</a>
-                    </div>
-                </div>
-
-                <div class="paper-item">
-                    <h3>Formulas for Pre-Olympiad Competition Math</h3>
-                    <p class="authors">Eashan Gandotra</p>
-                    <p class="venue">Walton High School, 2018</p>
-                    <p class="description">
-                        A curated collection of essential formulas and techniques for mathematics competitions.
-                        This resource has become widely used in the competition math community and consistently
-                        ranks as the top Google result for competition math formulas.
-                    </p>
-                    <div class="paper-links">
-                        <a href="papers/formulas-for-pre-olympiad-competition-math.pdf" class="btn-link" target="_blank">PDF</a>
-                    </div>
-                </div>
+            <div class="papers-list" id="papers-list">
+                <!-- Papers are dynamically loaded from data.js -->
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="tab-content">
             <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- Add your projects here. Example format: -->
-                <!--
-                <div class="project-card">
-                    <h3>Project Name</h3>
-                    <p class="project-description">
-                        Description of your project. What problem does it solve?
-                        What technologies did you use?
-                    </p>
-                    <div class="project-links">
-                        <a href="#" class="btn-link" target="_blank">GitHub</a>
-                        <a href="#" class="btn-link" target="_blank">Demo</a>
-                    </div>
-                </div>
-                -->
-                <p class="placeholder-text">Projects will be added here.</p>
+            <div class="projects-grid" id="projects-list">
+                <!-- Projects are dynamically loaded from data.js -->
             </div>
         </section>
 
-        <!-- Resume Section -->
-        <section id="resume" class="tab-content">
-            <h2>Resume</h2>
-            <div class="resume-container">
-                <div class="resume-download">
-                    <a href="resume/resume.pdf" class="btn-download" target="_blank" download>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download Resume (PDF)
-                    </a>
-                </div>
-
-                <div class="resume-content">
-                    <div class="resume-section">
-                        <h3>Education</h3>
-                        <div class="resume-item">
-                            <div class="resume-header">
-                                <strong>Georgia Institute of Technology</strong>
-                                <span class="resume-date">2019 - 2023</span>
-                            </div>
-                            <p>Bachelor of Science in Mathematics, Minor in Computing and Intelligence</p>
-                            <p>GPA: 3.96/4.0</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="resume-header">
-                                <strong>Budapest Semesters in Mathematics</strong>
-                                <span class="resume-date">Fall 2022</span>
-                            </div>
-                            <p>Study Abroad Program</p>
-                            <p>GPA: 4.0/4.0</p>
-                        </div>
-                    </div>
-
-                    <div class="resume-section">
-                        <h3>Experience</h3>
-                        <div class="resume-item">
-                            <div class="resume-header">
-                                <strong>Chicago Trading Company</strong>
-                                <span class="resume-date">Fall 2023 - Present</span>
-                            </div>
-                            <p class="resume-title">Quantitative Researcher, Equity Desk</p>
-                            <ul>
-                                <li>Focus on volatility modeling and pricing</li>
-                                <li>Develop and implement quantitative trading strategies</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="resume-section">
-                        <h3>Skills & Interests</h3>
-                        <div class="resume-item">
-                            <p><strong>Technical:</strong> Mathematics, Quantitative Finance, Volatility Modeling, Computing</p>
-                            <p><strong>Interests:</strong> Cooking, Reading, Distance Running, Travel, Violin</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- CV Section -->
+        <section id="cv" class="tab-content">
+            <div class="cv-container">
+                <h2>Curriculum Vitae</h2>
+                <p class="cv-description">Download my CV for a comprehensive overview of my education, experience, and qualifications.</p>
+                <a href="resume/resume.pdf" class="btn-download" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV (PDF)
+                </a>
             </div>
         </section>
     </main>
@@ -230,6 +130,7 @@
         <p>&copy; 2024 Eashan Gandotra</p>
     </footer>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

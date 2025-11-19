@@ -72,4 +72,66 @@ window.addEventListener('DOMContentLoaded', () => {
             navLink.classList.add('active');
         }
     }
+
+    // Render dynamic content
+    renderPapers();
+    renderProjects();
 });
+
+// Render papers from data.js
+function renderPapers() {
+    const papersContainer = document.getElementById('papers-list');
+    if (!papersContainer || !websiteData || !websiteData.papers) return;
+
+    if (websiteData.papers.length === 0) {
+        papersContainer.innerHTML = '<p class="placeholder-text">Papers will be added here.</p>';
+        return;
+    }
+
+    papersContainer.innerHTML = websiteData.papers.map(paper => {
+        const additionalLinks = paper.links && paper.links.length > 0
+            ? paper.links.map(link => `<a href="${link.url}" class="btn-link" target="_blank">${link.text}</a>`).join('')
+            : '';
+
+        return `
+            <div class="paper-item">
+                <h3>${paper.title}</h3>
+                <p class="authors">${paper.authors}</p>
+                <p class="venue">${paper.venue}</p>
+                <p class="description">${paper.description}</p>
+                <div class="paper-links">
+                    <a href="${paper.pdf}" class="btn-link" target="_blank">PDF</a>
+                    ${additionalLinks}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Render projects from data.js
+function renderProjects() {
+    const projectsContainer = document.getElementById('projects-list');
+    if (!projectsContainer || !websiteData || !websiteData.projects) return;
+
+    if (websiteData.projects.length === 0) {
+        projectsContainer.innerHTML = '<p class="placeholder-text">Projects coming soon.</p>';
+        return;
+    }
+
+    projectsContainer.innerHTML = websiteData.projects.map(project => {
+        const demoLink = project.demo
+            ? `<a href="${project.demo}" class="btn-link" target="_blank">Demo</a>`
+            : '';
+
+        return `
+            <div class="project-card">
+                <h3>${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="project-links">
+                    <a href="${project.github}" class="btn-link" target="_blank">GitHub</a>
+                    ${demoLink}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
