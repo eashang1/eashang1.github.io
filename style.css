@@ -109,8 +109,8 @@ body {
 }
 
 .profile-photo {
-    width: 340px;
-    height: 340px;
+    width: 510px;
+    height: 510px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
