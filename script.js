@@ -51,6 +51,8 @@ window.addEventListener('popstate', () => {
 
 // Load correct tab on page load based on URL hash
 window.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, rendering content...');
+
     const hash = window.location.hash.substring(1);
     if (hash && document.getElementById(hash)) {
         // Hide all tabs
@@ -76,12 +78,21 @@ window.addEventListener('DOMContentLoaded', () => {
     // Render dynamic content
     renderPapers();
     renderProjects();
+    console.log('Rendering complete');
 });
 
 // Render papers from data.js
 function renderPapers() {
     const papersContainer = document.getElementById('papers-list');
-    if (!papersContainer || !websiteData || !websiteData.papers) return;
+    if (!papersContainer || !websiteData || !websiteData.papers) {
+        console.log('Papers render failed:', {
+            container: !!papersContainer,
+            data: !!websiteData,
+            papers: !!websiteData?.papers
+        });
+        return;
+    }
+    console.log('Rendering', websiteData.papers.length, 'papers');
 
     if (websiteData.papers.length === 0) {
         papersContainer.innerHTML = '<p class="placeholder-text">Papers will be added here.</p>';
