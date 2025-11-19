@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Your Name</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" onclick="showTab('home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#papers" class="nav-link" onclick="showTab('papers')">Papers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" onclick="showTab('projects')">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="tab-content active">
+            <div class="home-header">
+                <div class="profile-photo">
+                    <img src="photo.jpg" alt="Your Name" id="profile-img">
+                    <!-- Replace photo.jpg with your actual photo -->
+                </div>
+                <div class="home-intro">
+                    <h2>Welcome!</h2>
+                    <p class="summary">
+                        Write your summary here. This is where you can introduce yourself,
+                        talk about your background, research interests, and what you're
+                        currently working on. Feel free to customize this section to reflect
+                        your personality and professional profile.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Papers Section -->
+        <section id="papers" class="tab-content">
+            <h2>Papers</h2>
+            <div class="papers-list">
+                <!-- Example paper entry - duplicate and modify as needed -->
+                <div class="paper-item">
+                    <h3>Paper Title</h3>
+                    <p class="authors">Author 1, Author 2, Author 3</p>
+                    <p class="venue">Conference/Journal Name, Year</p>
+                    <p class="description">Brief description of the paper and its contributions.</p>
+                    <div class="paper-links">
+                        <a href="#" class="btn-link">PDF</a>
+                        <a href="#" class="btn-link">Code</a>
+                        <a href="#" class="btn-link">arXiv</a>
+                    </div>
+                </div>
+
+                <!-- Add more papers here -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Example project card - duplicate and modify as needed -->
+                <div class="project-card">
+                    <h3>Project Name</h3>
+                    <p class="project-description">
+                        Description of your project. What problem does it solve?
+                        What technologies did you use?
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn-link">GitHub</a>
+                        <a href="#" class="btn-link">Demo</a>
+                    </div>
+                </div>
+
+                <!-- Add more projects here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
