@@ -63,7 +63,10 @@ body {
     letter-spacing: -0.01em;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
 .nav-link.active {
     color: var(--primary-color);
 }
@@ -106,8 +109,8 @@ body {
 }
 
 .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -209,12 +212,13 @@ body {
 }
 
 .social-link:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(10, 77, 104, 0.05);
 }
 
 .social-link:hover svg {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Section Headings */
@@ -231,17 +235,22 @@ h2 {
 .papers-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .paper-item {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
 }
 
 .paper-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
+}
+
+.paper-item:hover {
+    padding-left: 0.5rem;
 }
 
 .paper-item h3 {
@@ -251,6 +260,11 @@ h2 {
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+}
+
+.paper-item:hover h3 {
+    color: var(--accent-color);
 }
 
 .authors {
@@ -294,17 +308,22 @@ h2 {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .project-card {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
 }
 
 .project-card:last-child {
     border-bottom: none;
     padding-bottom: 0;
+}
+
+.project-card:hover {
+    padding-left: 0.5rem;
 }
 
 .project-card h3 {
@@ -313,6 +332,11 @@ h2 {
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+}
+
+.project-card:hover h3 {
+    color: var(--accent-color);
 }
 
 .project-description {
@@ -327,6 +351,26 @@ h2 {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.github-note {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.github-note a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.github-note a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
 /* Buttons and Links */
@@ -344,8 +388,9 @@ h2 {
 }
 
 .btn-link:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(10, 77, 104, 0.05);
 }
 
 /* Responsive Design */
@@ -372,8 +417,8 @@ h2 {
     }
 
     .profile-photo {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
     }
 
     .home-intro h2 {

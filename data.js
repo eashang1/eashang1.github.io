@@ -33,10 +33,20 @@ const websiteData = {
     // Projects Section
     projects: [
         {
-            title: "de Bruijn Sequence Magic!",
-            description: "Advised by Dr. Matt Baker. Website that let's you perform some interesting card magic tricks using a novel deck constructed using de Bruijn sequences.",
+            title: "de Bruijn Sequence Card Magic",
+            description: "Interactive website for performing card magic tricks using a novel deck constructed with de Bruijn sequences. Advised by Dr. Matt Baker.",
             github: "https://github.com/eashang1/a_stuck_wizard",
             demo: "https://eashang1.github.io/a_stuck_wizard/"
+        },
+        {
+            title: "Game AI & Adversarial Agents",
+            description: "Developed adversarial agents for competitive game environments including Halite, Terminal, and Super Auto Pets. Implemented search algorithms and heuristic evaluation functions.",
+            github: "https://github.com/eashang1/halite_agents"
+        },
+        {
+            title: "Super Smash Bros. for Game Boy Advance",
+            description: "Recreation of Super Smash Bros. Melee mechanics for GBA hardware. Built from scratch in C with custom sprite rendering and game physics.",
+            github: "https://github.com/eashang1/smash_gba_game"
         }
     ]
 };
