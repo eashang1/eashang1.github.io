@@ -8,7 +8,7 @@ const websiteData = {
             title: "Ramanujan's Summation",
             authors: "Eashan Gandotra",
             venue: "Georgia Institute of Technology, 2022",
-            description: "An exposition on Ramanujan's counterinutitive result showing that the sum of all positive integers equals -1/12.",
+            description: "An exposition on Ramanujan's counterinutitive result showing that the sum of all positive integers equals -1/12. Written after taking Complex Analysis at Georgia Tech.",
             pdf: "papers/ramanujans-summation.pdf",
             links: [] // Optional: add {text: "Code", url: "..."}, {text: "arXiv", url: "..."}
         },
@@ -16,7 +16,7 @@ const websiteData = {
             title: "Introduction to Olympiad Inequalities",
             authors: "Eashan Gandotra",
             venue: "Georgia Institute of Technology, 2020",
-            description: "An introduction to some beautiful inequalities often used in olympiad level math competitions. Created during the 2020 Georgia Tech Putnam seminar course.",
+            description: "An introduction to some beautiful inequalities often used in olympiad level math competitions. Written during the Georgia Tech Putnam seminar course.",
             pdf: "papers/introduction-to-olympiad-inequalities.pdf",
             links: []
         },

@@ -103,14 +103,14 @@ body {
 /* Home Section */
 .home-header {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: flex-start;
     margin-bottom: 3rem;
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -417,8 +417,8 @@ h2 {
     }
 
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
     }
 
     .home-intro h2 {
