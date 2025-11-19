@@ -53,6 +53,9 @@ window.addEventListener('popstate', () => {
 window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded, rendering content...');
 
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+
     const hash = window.location.hash.substring(1);
     if (hash && document.getElementById(hash)) {
         // Hide all tabs
