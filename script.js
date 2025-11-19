@@ -104,7 +104,16 @@ function renderPapers() {
 
     papersContainer.innerHTML = websiteData.papers.map(paper => {
         const additionalLinks = paper.links && paper.links.length > 0
-            ? paper.links.map(link => `<a href="${link.url}" class="btn-link" target="_blank">${link.text}</a>`).join('')
+            ? paper.links.map(link => `
+                <a href="${link.url}" class="btn-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    ${link.text}
+                </a>
+            `).join('')
             : '';
 
         return `
@@ -114,7 +123,16 @@ function renderPapers() {
                 <p class="venue">${paper.venue}</p>
                 <p class="description">${paper.description}</p>
                 <div class="paper-links">
-                    <a href="${paper.pdf}" class="btn-link" target="_blank">PDF</a>
+                    <a href="${paper.pdf}" class="btn-link" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        PDF
+                    </a>
                     ${additionalLinks}
                 </div>
             </div>
@@ -134,7 +152,14 @@ function renderProjects() {
 
     projectsContainer.innerHTML = websiteData.projects.map(project => {
         const demoLink = project.demo
-            ? `<a href="${project.demo}" class="btn-link" target="_blank">Demo</a>`
+            ? `<a href="${project.demo}" class="btn-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Demo
+            </a>`
             : '';
 
         return `
@@ -142,7 +167,12 @@ function renderProjects() {
                 <h3>${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="project-links">
-                    <a href="${project.github}" class="btn-link" target="_blank">GitHub</a>
+                    <a href="${project.github}" class="btn-link" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
                     ${demoLink}
                 </div>
             </div>

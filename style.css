@@ -17,7 +17,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
     line-height: 1.65;
     color: var(--text-color);
-    background-color: var(--background);
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
     font-size: 16px;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +34,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, transparent 0%, var(--accent-color) 50%, transparent 100%) 1;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -109,11 +110,18 @@ body {
 }
 
 .profile-photo {
-    width: 510px;
-    height: 510px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .profile-photo img {
@@ -130,9 +138,9 @@ body {
 
 .home-intro h2 {
     color: var(--primary-color);
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.03em;
     line-height: 1.2;
     font-family: 'Fraunces', Georgia, serif;
@@ -172,13 +180,17 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 300;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
     border-bottom: 1px solid transparent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background-color: rgba(10, 77, 104, 0.03);
 }
 
 .contact-item a:hover {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
+    background-color: rgba(10, 77, 104, 0.08);
 }
 
 /* Social Links */
@@ -219,6 +231,47 @@ body {
 
 .social-link:hover svg {
     color: var(--accent-color);
+}
+
+/* Brand-specific colors for social links */
+.social-link[href*="linkedin"]:hover {
+    border-color: #0077b5;
+    color: #0077b5;
+    background-color: rgba(0, 119, 181, 0.05);
+}
+
+.social-link[href*="linkedin"]:hover svg {
+    color: #0077b5;
+}
+
+.social-link[href*="github"]:hover {
+    border-color: #333;
+    color: #333;
+    background-color: rgba(51, 51, 51, 0.05);
+}
+
+.social-link[href*="github"]:hover svg {
+    color: #333;
+}
+
+.social-link[href*="codeforces"]:hover {
+    border-color: #1f8dd6;
+    color: #1f8dd6;
+    background-color: rgba(31, 141, 214, 0.05);
+}
+
+.social-link[href*="codeforces"]:hover svg {
+    color: #1f8dd6;
+}
+
+.social-link[href*="artofproblemsolving"]:hover {
+    border-color: #e74c3c;
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+.social-link[href*="artofproblemsolving"]:hover svg {
+    color: #e74c3c;
 }
 
 /* Section Headings */
@@ -375,7 +428,9 @@ h2 {
 
 /* Buttons and Links */
 .btn-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: transparent;
     color: var(--text-light);
@@ -387,10 +442,20 @@ h2 {
     font-weight: 300;
 }
 
+.btn-link svg {
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
 .btn-link:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
     background-color: rgba(10, 77, 104, 0.05);
+}
+
+.btn-link:hover svg {
+    opacity: 1;
 }
 
 /* Responsive Design */
