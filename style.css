@@ -10,6 +10,7 @@
     --text-light: #737373;
     --background: #ffffff;
     --border-color: #f5f5f5;
+    --accent-color: #0a4d68;
 }
 
 body {
@@ -22,6 +23,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* Import serif font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500&display=swap');
 
 /* Navigation */
 .navbar {
@@ -40,15 +44,8 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.nav-logo {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: -0.02em;
 }
 
 .nav-menu {
@@ -109,8 +106,8 @@ body {
 }
 
 .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -130,11 +127,16 @@ body {
 
 .home-intro h2 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.25rem;
     margin-bottom: 2rem;
     font-weight: 400;
     letter-spacing: -0.03em;
     line-height: 1.2;
+    font-family: 'Fraunces', Georgia, serif;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .summary {
@@ -168,10 +170,12 @@ body {
     font-size: 0.95rem;
     font-weight: 300;
     transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .contact-item a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
 /* Social Links */
@@ -216,21 +220,22 @@ body {
 /* Section Headings */
 h2 {
     color: var(--primary-color);
-    font-size: 1.75rem;
-    margin-bottom: 3rem;
+    font-size: 1.85rem;
+    margin-bottom: 2.5rem;
     font-weight: 400;
     letter-spacing: -0.02em;
+    font-family: 'Fraunces', Georgia, serif;
 }
 
 /* Papers Section */
 .papers-list {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .paper-item {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -289,11 +294,11 @@ h2 {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .project-card {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -367,8 +372,8 @@ h2 {
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
     .home-intro h2 {
