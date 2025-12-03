@@ -5,6 +5,14 @@ const websiteData = {
     // Papers Section
     papers: [
         {
+            title: "Introductory Topics in Statistical Learning",
+            authors: "Eashan Gandotra",
+            venue: "Chicago Trading Company, 2025",
+            description: "An introduction to fundamental concepts in statistical learning theory and machine learning.",
+            pdf: "papers/introductory-topics-in-statistical-learning.pdf",
+            links: []
+        },
+        {
             title: "Ramanujan's Summation",
             authors: "Eashan Gandotra",
             venue: "Georgia Institute of Technology, 2022",
