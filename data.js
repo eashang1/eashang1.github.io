@@ -41,6 +41,11 @@ const websiteData = {
     // Projects Section
     projects: [
         {
+            title: "Transfer Learning for Physics-Informed Neural Networks",
+            description: "Trains a neural network for option pricing (Black-Scholes PDE), verifies results against an implicit finite difference scheme, and transfers learned weights to solve the heat equation",
+            github: "https://github.com/eashang1/pinn-diffusion-pde"
+        },
+        {
             title: "de Bruijn Sequence Card Magic",
             description: "Interactive website for performing card magic tricks using a novel deck constructed with de Bruijn sequences. Advised by Dr. Matt Baker.",
             github: "https://github.com/eashang1/a_stuck_wizard",
