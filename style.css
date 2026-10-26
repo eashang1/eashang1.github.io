@@ -67,6 +67,13 @@ body {
 
 .nav-link.active {
     color: var(--primary-color);
+    box-shadow: 0 2px 0 var(--accent-color);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 /* Main Container */
@@ -315,6 +322,11 @@ h2 {
 
 .paper-item:hover h3 {
     color: var(--accent-color);
+}
+
+.paper-item h3 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .authors {

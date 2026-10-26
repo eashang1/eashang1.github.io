@@ -122,7 +122,7 @@ function renderPapers() {
 
         return `
             <div class="paper-item">
-                <h3>${paper.title}</h3>
+                <h3><a href="${paper.pdf}" target="_blank" rel="noopener">${paper.title}</a></h3>
                 <p class="authors">${authors} · <span class="venue">${paper.venue}</span></p>
                 <p class="description">${paper.description}</p>
                 <div class="paper-links">
