@@ -5,6 +5,18 @@ const websiteData = {
     // Papers Section
     papers: [
         {
+            title: "Beyond Pairs: Detecting Colluding Groups of Agents from Their Moves",
+            authors: "Tarun Trivedi, Eashan Gandotra",
+            venue: "Apart Research AI Collusion Research Sprint, 2026",
+            description: "We asked whether an auditor who sees only agents' moves can tell which agents are colluding in a multi-agent game. The existing pairwise detector misses colluding groups of three or more. We introduce GroupScan, an algorithm that scans every group of players for coordinated moves and calibrates against shuffled copies of the game to account for honest, correlated actions. We first validate it in multi-player Rock Paper Scissors, where it recovers hidden groups that pairwise methods miss with low false positive rates. We then extend it to LLM agents: in a double auction, it identifies a cartel of five LLM sellers that the pairwise method fails to detect.",
+            pdf: "papers/beyond-pairs-detecting-colluding-groups.pdf",
+            links: [
+                {text: "Apart Research", url: "https://apartresearch.com/sprints/projects/beyond-pairs-detecting-colluding-groups-of-agents-from-their-moves-4zhs"},
+                {text: "Code", url: "https://github.com/taruntrivedi3/collusion-detection"},
+                {text: "Interactive viewer", url: "https://taruntrivedi3.github.io/collusion-detection/viewer/"}
+            ]
+        },
+        {
             title: "Introductory Topics in Statistical Learning",
             authors: "Eashan Gandotra",
             venue: "Chicago Trading Company, 2025",
